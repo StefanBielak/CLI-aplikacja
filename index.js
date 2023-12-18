@@ -1,6 +1,5 @@
-const yargs = require('yargs');
-const { listContacts, getContactById, removeContact, addContact } = require('./contacts');
-
+import yargs from 'yargs';
+import { listContacts, getContactById, removeContact, addContact } from './contacts';
 const argv = yargs.argv;
 
 function invokeAction({ action, id, name, email, phone }) {

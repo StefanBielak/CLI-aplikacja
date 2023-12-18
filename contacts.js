@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const contactsPath = path.join(__dirname, 'db/contacts.json');
+const contactsPath = path.join(process.cwd(), 'db/contacts.json');
 
 function listContacts() {
   try {
@@ -60,9 +60,4 @@ function addContact(name, email, phone) {
   }
 }
 
-module.exports = {
-  listContacts,
-  getContactById,
-  removeContact,
-  addContact,
-};
+export { listContacts, getContactById, removeContact, addContact };
